@@ -15,11 +15,16 @@
 
 <body>
     <script type="module">
-        import init, { sample } from "./pkg/rps.js";
+        import init, { Selection, sampleSelection, round, message } from "./pkg/rps.js";
         await init();
-        for (let index = 0; index < 10; index++) {
-            console.log(sample());
-        }
+
+        let versus = round(Selection.Rock, sampleSelection())
+        console.log(message(versus))
+        versus = round(Selection.Paper, sampleSelection())
+        console.log(message(versus))
+        versus = round(Selection.Scissors, sampleSelection())
+        console.log(message(versus))
+
     </script>
 </body>
 
