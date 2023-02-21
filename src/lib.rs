@@ -1,9 +1,10 @@
 mod js_functions;
+
 use wasm_bindgen::prelude::*;
 
 /// The selection enum represent the options players have to
 /// choose from as an action. The primary goal of it is to
-/// remove the need for a string-based interface. 
+/// remove the need for a string-based interface.
 #[wasm_bindgen]
 #[derive(Copy, Clone, Debug)]
 pub enum Selection {
@@ -19,6 +20,19 @@ impl From<Selection> for &str {
             Selection::Paper => "Paper",
             Selection::Scissors => "Scissors",
         }
+    }
+}
+
+/// Converts a string into a selection. The function fails if the
+/// provided string is not in the following list:
+/// `"rock", "paper", "scissors"`
+#[wasm_bindgen(js_name = "stringToSelection")]
+pub fn string_to_selection(selection: &str) -> Selection {
+    match &selection.to_lowercase()[..] {
+        "rock" => Selection::Rock,
+        "paper" => Selection::Paper,
+        "scissors" => Selection::Scissors,
+        &_ => panic!("Cannot convert selection: '{selection}'."),
     }
 }
 
@@ -57,7 +71,7 @@ pub struct Versus {
     pub winner: Role,
 }
 
-/// Represents a round in a game. It checks the two inputs and 
+/// Represents a round in a game. It checks the two inputs and
 /// determines based on the rules of rock-paper-scissors the winner.
 #[wasm_bindgen]
 pub fn round(player: Selection, computer: Selection) -> Versus {

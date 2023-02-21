@@ -14,18 +14,7 @@
 </head>
 
 <body>
-    <script type="module">
-        import init, { Selection, sampleSelection, round, message } from "./pkg/rps.js";
-        await init();
-
-        let versus = round(Selection.Rock, sampleSelection())
-        console.log(message(versus))
-        versus = round(Selection.Paper, sampleSelection())
-        console.log(message(versus))
-        versus = round(Selection.Scissors, sampleSelection())
-        console.log(message(versus))
-
-    </script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
