@@ -1,4 +1,4 @@
-import init, { Role, round, stringToSelection, sampleSelection, message } from "../pkg/rps.js";
+import init, { Role, round, stringToSelection, sampleSelection, message } from "../logic/rps.js";
 import Game from "./game.js";
 await init();
 

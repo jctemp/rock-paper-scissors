@@ -1,4 +1,4 @@
-import { Role } from "../pkg/rps.js";
+import { Role } from "../logic/rps.js";
 
 class Game {
     round = 1;
