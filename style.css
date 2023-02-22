@@ -1,0 +1,25 @@
+* {
+    margin: auto;
+}
+
+body {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    gap: 12pt
+}
+
+button {
+    font-size: 12pt;
+    width: calc(12pt * 7);
+    aspect-ratio: 1/1;
+}

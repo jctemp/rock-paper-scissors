@@ -5,16 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            background-color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./js/main.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-    <script type="module" src="./js/main.js"></script>
+    <h1>Rock-paper-scissors</h1>
+    <div aria-label="game">
+        <h2 class="round">Round</h2>
+        <p class="score-human">Score:</p>
+        <p class="score-computer">Score:</p>
+        <div class="selections">
+            <ul>
+                <li><button data-type="rock">Rock</button></li>
+                <li><button data-type="paper">Paper</button></li>
+                <li><button data-type="scissors">Scissors</button></li>
+            </ul>
+        </div>
+        <p class="result">Waiting for the first round.</p>
+    </div>
 </body>
 
 </html>
