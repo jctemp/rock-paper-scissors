@@ -1,25 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-jet-click: #232021;
+    --color-jet-highlight: #2d2a2b;
+    --color-jet: #3A3335;
+    --color-raspberry: #D81E5B;
+    --color-vermilion: #F0544F;
+    --color-papaya-whip: #FDF0D5;
+    --color-ash-gray: #C6D8D3;
+    --radius: 8px;
+    --size: 250px;
+    --max-width: 952px;
+}
+
 * {
     margin: auto;
+    font-family: Roboto, sans-serif;
 }
 
 body {
     margin: 0;
+    background: var(--color-vermilion);
+    background: linear-gradient(90deg, var(--color-vermilion) 50%, var(--color-raspberry) 50%);
 
     display: flex;
     flex-direction: column;
 }
 
-ul {
+.component {
+    padding: 16px 0px;
+    margin: 16px 0px;
+    text-align: center;
+    color: var(--color-papaya-whip);
+    background-color: var(--color-jet);
+    border-radius: var(--radius);
+}
+
+h1, p {
+    width: var(--max-width);
+    font-size: 48px;
+}
+
+h1.component {
+    margin: 16px auto;
+}
+
+div.game {
+    width: var(--max-width);
+}
+
+div.status {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.status * {
     margin: 0;
+    width: var(--size);
+    font-size: 36px;
+}
+
+p.result {
+    width: var(--max-width);
+    font-size: 36px;
+}
+
+ul {
+    margin: 32px;
     padding: 0;
     list-style: none;
 
     display: flex;
-    gap: 12pt
+    justify-content: space-between;
+}
+
+ul * {
+    margin: 0;
+}
+
+i {
+    transform: rotate(-45deg);
 }
 
 button {
-    font-size: 12pt;
-    width: calc(12pt * 7);
+    font-size: 36px;
+    width: 196px;
     aspect-ratio: 1/1;
+    border-style: none;
+    transform: rotate(45deg);
 }
+
+button:hover {
+    color: #C6D8D3;
+    background-color: var(--color-jet-highlight);
+}
+
+button:active {
+    color: #C6D8D3;
+    background-color: var(--color-jet-click);
+}
+

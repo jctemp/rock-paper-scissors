@@ -35,9 +35,14 @@ function displayEndScreen(winner) {
 
     const container = document.createElement("div");
     container.setAttribute("aria-label", "game");
+    container.style["display"] = "flex";
+    container.style["flexDirection"] = "column";
+    container.style["alignItems"] = "center";
+    container.style["gap"] = "32px";
     bodyElement.appendChild(container);
 
     const endMessage = document.createElement("p");
+    endMessage.classList.add("component");
     container.appendChild(endMessage);
 
     if (winner === Role.Computer) {
@@ -47,7 +52,8 @@ function displayEndScreen(winner) {
     }
 
     const reset = document.createElement("button");
-    reset.textContent = "Reset"
+    reset.textContent = "Reset";
+    reset.classList.add("component");
     container.appendChild(reset);
 
     reset.addEventListener("click", () => {
